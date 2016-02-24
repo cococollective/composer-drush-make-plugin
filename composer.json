@@ -1,0 +1,35 @@
+{
+  "name": "cococollective/composer-drush-make-plugin",
+  "description": "Composer plugin to allow loading of drush make files.",
+  "type": "composer-plugin",
+  "license": "MIT",
+  "homepage": "https://github.com/cococollective/composer-drush-make-plugin",
+  "authors": [
+    {
+      "name": "Sierk Beij",
+      "email": "sierk@cococollective.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.3.2",
+    "composer-plugin-api": "^1.0",
+    "drush/drush": "~8.0",
+    "symfony/yaml": ">2.7 <4"
+  },
+  "require-dev": {
+    "composer/composer": "1.0.*@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "CocoCollective\\Composer\\": "src/"
+    }
+  },
+  "extra": {
+    "class": "CocoCollective\\Composer\\DrushMakePlugin"
+  },
+  "config": {
+     "optimize-autoloader": true
+  }
+}
